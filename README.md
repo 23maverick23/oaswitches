@@ -2,9 +2,9 @@
 
 _Description: A bookmarklet for converting internal switch page into an HTML table (internal staff use only)_
 
-_Homepage: [http://ryancmorrissey.com/projects/oaswitches.html](http://ryancmorrissey.com/projects/oaswitches.html)_
+[Visit homepage](http://ryancmorrissey.com/projects/oaswitches.html)
 
-## Troubleshooting & Useful Tips
+## How To
 
 _Instructions for Use_
 
@@ -13,36 +13,35 @@ _Instructions for Use_
 3. Click the newly created bookmarklet to get an output of switches.
 4. Check for pop-up blockers or unsecure content warnings - you can ignore them.
 
-_HTML Output Guide_
-
-<span style="font-family: Monaco,Menlo,Consolas,'Courier New',monospace;font-size: 14px;color: #A400B3;">text</span> : manually typed text will show in purple (HTML encoded)
-
-<span style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 14px;color: #A50000;">OFF</span>/<span style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 14px;color: green;">ON</span> : checkboxes will have OFF for unchecked, and ON for checked
-
-<span style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;font-size: 14px;border: 1px solid gray;border-radius: 4px;margin: 1px 0;padding: 0 4px;background-color: #DDF;display: inline-block;">dropdown option</span> : selected dropdown option or multi-select options
-
 _Quick Reminder_
 
 Only available in modern browsers (umm...that means no IE)
 
-## Contributing changes
+## Helpful Tips
+
+_HTML Output Guide_
+
+![text](https://raw.github.com/23maverick23/oaswitches/master/img/text.png) : manually typed text will be purple (HTML is encoded)
+
+![OFF / ON](https://raw.github.com/23maverick23/oaswitches/master/img/off_on.png) : checkboxes will have red OFF for unchecked and green ON for checked
+
+![dropdown option](https://raw.github.com/23maverick23/oaswitches/master/img/dropdown_option.png) : selected dropdown option or multi-select options will be inline blocks
+
+## Credits
+
+Homepage & Output CSS - [Twitter Bootstrap](https://github.com/twitter/bootstrap)
+
+Hi-Res Browser Icons - [PaulIrish.com](http://paulirish.com/2010/high-res-browser-icons/)
+
+## Change Log
 
 _v1.1_
 
-* Fixed logic in `oaswitches.js` for determining "selected" option in dropdown lists.
-* Added additional styling to HTML output.
+* Fixed logic in `oaswitches.js` for determining selected option(s)
+* Added additional styling to HTML output
+* Added README and LICENSE files
+* Added image files for README
 
 _v1.0_
 
 * Initial commit
-
-## License
-
-The MIT License (MIT)
-Copyright (c) 2012 ryancmorrissey.com
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
