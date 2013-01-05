@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	 <head>
+		<meta charset="utf-8">
+		<title>oaSwitches Bookmarklet</title>
+		<link href="oaswitches.min.css" rel="stylesheet">
+		<style type="text/css">
+			body {
+				padding-top: 20px;
+				padding-bottom: 40px;
+			}
+			.container-narrow {
+				max-width: 700px;
+				margin: 0 auto;
+			}
+			.container-narrow > hr {
+				margin: 30px 0;
+			}
+			.container-narrow > p {
+				margin: 30px 0;
+				text-align: center;
+			}
+			.container-images {
+				max-width: 264px;
+				margin: 10px auto;
+			}
+			.container-images > img {
+				margin: 5px 20px;
+			}
+			.container-center {
+				max-width: 140px;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+
+	<body>
+
+	<div class="container-narrow">
+
+		<div class="page-header">
+		    <h1>oaSwitches Bookmarklet <small>Internal use only</small></h1>
+		</div>
+
+		<div class="alert alert-info alert-block">
+			<ol>
+				<li>Drag the button onto your bookmarks bar to create a bookmarklet.</li>
+				<li>Navigate to the internal switches page of an account on any server.</li>
+				<li>Click the newly created bookmarklet to get an output of switches.</li>
+				<li>Check for pop-up blockers or unsecure content warnings - you can ignore them.</li>
+			</ol>
+		</div>
+
+		<div class="container-center">
+			<a id="bookmarklet" class="btn btn-large btn-info" href='javascript:(function(){document.body.appendChild(document.createElement("script")).src="http://ryancmorrissey.com/projects/oaswitches.js";})();'>oaSwitches</a>
+		</div>
+		
+		<p id="errors"></p>
+
+		<div id="images" class="container-images">
+			<img src="img/chrome-48.png"><img src="img/firefox-48.png"><img src="img/safari-48.png">
+		</div>
+
+		<hr>
+
+		<div class="footer">
+			<p class="muted">&copy; ryancmorrissey.com 2012</p>
+		</div>
+
+	</div>
+	
+	<script>
+		// browser detection; unsupported in IE
+		if (navigator.userAgent.toString().indexOf("MSIE") > -1) {
+			document.getElementById("errors").innerHTML="<div class='alert alert-error'><strong>Uh oh... </strong>looks like you're using an unsupported browser (likely IE). Start using a modern one already!</div>";
+			document.getElementById("images").innerHTML="<img src='img/ie-48.png' style='margin-left:104px;'>";
+		}
+	</script>
+
+  </body>
+</html>
