@@ -8,10 +8,17 @@ _Description: A bookmarklet for converting internal switch page into an HTML tab
 
 _Instructions for Use_
 
-1. Drag the button onto your bookmarks bar to create a bookmarklet.
-2. Navigate to the internal switches page of an account on any server.
-3. Click the newly created bookmarklet to get an output of switches.
-4. Check for pop-up blockers or unsecure content warnings - you can ignore them.
+* Drag the following JavaScript code onto your bookmarks bar to create a bookmarklet.
+
+```javascript
+javascript:(function(){document.body.appendChild(document.createElement("script")).src="https://raw.github.com/23maverick23/oaswitches/master/oaswitches.js";})();
+```
+
+* Navigate to the internal switches page of an account on any server.
+
+* Click the newly created bookmarklet to get an output of switches.
+
+* Check for pop-up blockers or unsecure content warnings - you can ignore them.
 
 _Quick Reminder_
 
@@ -29,9 +36,7 @@ _HTML Output Guide_
 
 ## Credits
 
-Homepage & Output CSS - [Twitter Bootstrap](https://github.com/twitter/bootstrap)
-
-Hi-Res Browser Icons - [PaulIrish.com](http://paulirish.com/2010/high-res-browser-icons/)
+Base Table CSS - [Twitter Bootstrap](https://github.com/twitter/bootstrap)
 
 ## Change Log
 
