@@ -2,8 +2,6 @@
 
 _Description: A bookmarklet for converting internal switch page into an HTML table (internal staff use only)_
 
-[Visit homepage](http://ryancmorrissey.com/projects/oaswitches.html)
-
 ## How To
 
 _Instructions for Use_
