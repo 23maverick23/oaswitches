@@ -4,27 +4,24 @@ _Description: A bookmarklet for converting internal switch page into an HTML tab
 
 ## How To
 
-_Instructions for Use_
+### Instructions for Use
 
-* Drag the following JavaScript code onto your bookmarks bar to create a bookmarklet.
+* Drag the below JavaScript code onto your bookmarks bar to create a bookmarklet (feel free to rename it).
+* Navigate to the internal switches page of an account on any server.
+* Click the newly created bookmarklet to get an output of switches.
+* Check for pop-up blockers or unsecure content warnings - you can ignore them.
 
 ```javascript
 javascript:(function(){document.body.appendChild(document.createElement("script")).src="https://raw.github.com/23maverick23/oaswitches/master/oaswitches.js";})();
 ```
 
-* Navigate to the internal switches page of an account on any server.
+## Helpful Tips
 
-* Click the newly created bookmarklet to get an output of switches.
-
-* Check for pop-up blockers or unsecure content warnings - you can ignore them.
-
-_Quick Reminder_
+### Quick Reminder
 
 Only available in modern browsers (umm...that means no IE)
 
-## Helpful Tips
-
-_HTML Output Guide_
+### HTML Output Guide
 
 ![text](https://raw.github.com/23maverick23/oaswitches/master/img/text.png) : manually typed text will be purple (HTML is encoded)
 
@@ -34,17 +31,21 @@ _HTML Output Guide_
 
 ## Credits
 
-Base Table CSS - [Twitter Bootstrap](https://github.com/twitter/bootstrap)
+Base CSS - [Twitter Bootstrap](https://github.com/twitter/bootstrap)
 
 ## Change Log
 
-_v1.1_
+### v1.2
+
+* Added support for internal switch ID in HTML output
+
+### v1.1
 
 * Fixed logic in `oaswitches.js` for determining selected option(s)
 * Added additional styling to HTML output
 * Added README and LICENSE files
 * Added image files for README
 
-_v1.0_
+### v1.0
 
 * Initial commit
