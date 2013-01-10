@@ -30,26 +30,25 @@
         <section id="main-content">
           <h1><em>oaSwitches Bookmarklet</em></h1>
 
-<p><em>Description: A bookmarklet for converting internal switch page into an HTML table (staff use only)</em></p>
+<p><em>Description: A bookmarklet for converting internal switch page into an HTML table (internal staff use only)</em></p>
 
 <h2>How To</h2>
 
 <h3>Instructions for Use</h3>
 
 <ul>
-<li>Drag the JavaScript code below onto your bookmarks bar to create a bookmarklet (feel free to rename it to anything you like).</li>
+<li>Drag the below JavaScript code onto your bookmarks bar to create a bookmarklet (feel free to rename it).</li>
 <li>Navigate to the internal switches page of an account on any server.</li>
-<li>Click the newly created bookmarklet to get an HTML table output of switches.</li>
-<li>Use the Output Guide below to help clarify the color coding.</li>
+<li>Click the newly created bookmarklet to get an output of switches.</li>
+<li>Check for pop-up blockers or unsecure content warnings - you can ignore them.</li>
 </ul><div class="highlight"><pre><span class="nx">javascript</span><span class="o">:</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">"script"</span><span class="p">)).</span><span class="nx">src</span><span class="o">=</span><span class="s2">"https://raw.github.com/23maverick23/oaswitches/master/oaswitches.js"</span><span class="p">;})();</span>
 </pre></div>
 
+<h2>Helpful Tips</h2>
+
 <h3>Quick Reminder</h3>
 
-<ul>
-<li>Check for pop-up blockers or unsecure content warnings - you can ignore them.</li>
-<li>Only available in modern browsers (umm...that means no IE)</li>
-</ul><h2>Helpful Tips</h2>
+<p>Only available in modern browsers (umm...that means no IE)</p>
 
 <h3>HTML Output Guide</h3>
 
@@ -61,11 +60,15 @@
 
 <h2>Credits</h2>
 
-<p>Base Table CSS - <a href="https://github.com/twitter/bootstrap">Twitter Bootstrap</a></p>
+<p>Base CSS - <a href="https://github.com/twitter/bootstrap">Twitter Bootstrap</a></p>
 
 <h2>Change Log</h2>
 
-<h3>v1.1</h3>
+<h3>v1.2</h3>
+
+<ul>
+<li>Added support for internal switch ID in HTML output</li>
+</ul><h3>v1.1</h3>
 
 <ul>
 <li>Fixed logic in <code>oaswitches.js</code> for determining selected option(s)</li>
