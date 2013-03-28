@@ -18,7 +18,7 @@
 				var label = "";
 
 				if (switchArray[i].getElementsByTagName("label").length > 0) {
-					label = switchArray[i].getElementsByTagName("label")[1].innerText;
+					label = switchArray[i].getElementsByTagName("label")[1].textContent;
 				}
 				else {
 					label = "-BLANK-";
