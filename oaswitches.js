@@ -13,6 +13,7 @@
 
 			var switchArray = document.getElementsByClassName("formBody")[0].getElementsByTagName("table");
 			var counter = 1;
+			var error_log = "";
 
 			for (var i=0;i<switchArray.length;i++) {
 
@@ -59,10 +60,10 @@
 							for (var k=0;k<optionsM.length;k++) {
 								// use selected value
 								v = optionsM[k].textContent;
-								html = "<span class='list-item'>" + v + "</span>";
+								html = "<span class='list-item'>" + v + ",</span>";
 								value.push(html);
 							}
-							value = value.join(", ");
+							value = value.join(" ");
 							name = switchArray[i].getElementsByTagName("select")[1].name;
 							name = name.replace(/_selected_/, '');
 						}
@@ -99,7 +100,7 @@
 					}
 				}
 				catch(e) {
-					console.log("Error: " + e + " (loop # " + i);
+					error_log += e + "\n";
 				}
 			}
 
@@ -109,6 +110,8 @@
 			newWindow.focus();
 			newWindow.document.write(content);
 			newWindow.document.close();
+
+			console.log(error_log);
 		}
 		else {
 
