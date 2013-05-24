@@ -15,90 +15,91 @@
 			var counter = 1;
 
 			for (var i=0;i<switchArray.length;i++) {
-				var label = "";
 
-				if (switchArray[i].getElementsByTagName("label").length > 0) {
-					label = switchArray[i].getElementsByTagName("label")[1].textContent;
-				}
-				else {
-					label = "-BLANK-";
-				}
+				try {
+					var label = "";
 
-				var value = "";  // value of switch
-				var name = "";  // internal_id of switch
+					if (switchArray[i].getElementsByTagName("label").length > 0) {
+						label = switchArray[i].getElementsByTagName("label")[1].textContent;
+					}
+					else {
+						label = "-BLANK-";
+					}
 
-				if (switchArray[i].getElementsByTagName("input").length > 0) {
-					// checkbox field
-					if (switchArray[i].getElementsByTagName("input")[0].type == "checkbox") {
-						value = switchArray[i].getElementsByTagName("input")[0].checked;
-						
-						name = switchArray[i].getElementsByTagName("input")[0].name;
+					var value = "";  // value of switch
+					var name = "";  // internal_id of switch
 
-						if (value == "1") {
-							value = "<span class='check-on'>ON</span>";
-						} else {
-							value = "<span class='check-off'>OFF</span>";
+					if (switchArray[i].getElementsByTagName("input").length > 0) {
+						// checkbox field
+						if (switchArray[i].getElementsByTagName("input")[0].type == "checkbox") {
+							value = switchArray[i].getElementsByTagName("input")[0].checked;
+							name = switchArray[i].getElementsByTagName("input")[0].name;
+
+							if (value == "1") {
+								value = "<span class='check-on'>ON</span>";
+							} else {
+								value = "<span class='check-off'>OFF</span>";
+							}
+						}
+						// this is a text field
+						else if (switchArray[i].getElementsByTagName("input")[0].type !== "submit") {
+							value = switchArray[i].getElementsByTagName("input")[0].value;
+							value = value.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+							value = "<code>" + value + "</code>";
+							name = switchArray[i].getElementsByTagName("input")[0].name;
 						}
 					}
-					// this is a text field
-					else if (switchArray[i].getElementsByTagName("input")[0].type !== "submit") {
-						value = switchArray[i].getElementsByTagName("input")[0].value;
+
+					else if (switchArray[i].getElementsByTagName("select").length > 1) {
+						// this is a multiple select field
+						var optionsM;
+						if (switchArray[i].getElementsByTagName("select")[0].multiple) {
+							optionsM = switchArray[i].getElementsByTagName("select")[1].getElementsByTagName("option");
+							value = [];
+							for (var k=0;k<optionsM.length;k++) {
+								// use selected value
+								v = optionsM[k].textContent;
+								html = "<span class='list-item'>" + v + "</span>";
+								value.push(html);
+							}
+							value = value.join(", ");
+							name = switchArray[i].getElementsByTagName("select")[1].name;
+							name = name.replace(/_selected_/, '');
+						}
+					}
+					else if (switchArray[i].getElementsByTagName("select").length > 0) {
+					// this is a select field
+						var options = switchArray[i].getElementsByTagName("option");
+						for (var j=0;j<options.length;j++) {
+							// use selected value
+							if (options[j].selected) {
+								value = options[j].textContent;
+							}
+						}
+						// assume first value is default
+						if (value === "" || value === null || value < 0) {
+							value = options[0].textContent;
+						}
+
+						value = "<span class='list-item'>" + value + "</span>";
+						name = switchArray[i].getElementsByTagName("select")[0].name;
+					}
+					// this is a textarea
+					else if (switchArray[i].getElementsByTagName("textarea").length > 0) {
+						value = switchArray[i].getElementsByTagName("textarea")[0].value;
 						value = value.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
 						value = "<code>" + value + "</code>";
-						
-						name = switchArray[i].getElementsByTagName("input")[0].name;
-					}
-				}
-
-				else if (switchArray[i].getElementsByTagName("select").length > 1) {
-					// this is a multiple select field
-					var optionsM;
-					if (switchArray[i].getElementsByTagName("select")[0].multiple) {
-						optionsM = switchArray[i].getElementsByTagName("select")[1].getElementsByTagName("option");
-						value = [];
-						for (var k=0;k<optionsM.length;k++) {
-							// use selected value
-							v = optionsM[k].textContent;
-							html = "<span class='list-item'>" + v + "</span>";
-							value.push(html);
-						}
-						value = value.join(", ");
-						
-						name = switchArray[i].getElementsByTagName("select")[1].name;
-						name = name.replace(/_selected_/, '');
-					}
-				}
-				else if (switchArray[i].getElementsByTagName("select").length > 0) {
-				// this is a select field
-					var options = switchArray[i].getElementsByTagName("option");
-					for (var j=0;j<options.length;j++) {
-						// use selected value
-						if (options[j].selected) {
-							value = options[j].textContent;
-						}
-					}
-					// assume first value is default
-					if (value === "" || value === null || value < 0) {
-						value = options[0].textContent;
+						name = switchArray[i].getElementsByTagName("textarea")[0].name;
 					}
 
-					value = "<span class='list-item'>" + value + "</span>";
-					
-					name = switchArray[i].getElementsByTagName("select")[0].name;
+					if (label != "-BLANK-") {
+						// console.log(counter + "|" + value + "|" + label);
+						content += "<tr><td>" + counter + "</td><td>" + label + "</td><td>" + name + "</td><td>" + value + "</td></tr>";
+						counter++;
+					}
 				}
-				// this is a textarea
-				else if (switchArray[i].getElementsByTagName("textarea").length > 0) {
-					value = switchArray[i].getElementsByTagName("textarea")[0].value;
-					value = value.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
-					value = "<code>" + value + "</code>";
-					
-					name = switchArray[i].getElementsByTagName("textarea")[0].name;
-				}
-
-				if (label != "-BLANK-") {
-					// console.log(counter + "|" + value + "|" + label);
-					content += "<tr><td>" + counter + "</td><td>" + label + "</td><td>" + name + "</td><td>" + value + "</td></tr>";
-					counter++;
+				catch(e) {
+					console.log("Error: " + e + " (loop # " + i);
 				}
 			}
 
