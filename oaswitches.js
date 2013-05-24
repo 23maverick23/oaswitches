@@ -20,8 +20,11 @@
 				try {
 					var label = "";
 
-					if (switchArray[i].getElementsByTagName("label").length > 0) {
+					if (switchArray[i].getElementsByTagName("label").length > 1) {
 						label = switchArray[i].getElementsByTagName("label")[1].textContent;
+					}
+					else if (switchArray[i].getElementsByTagName("label").length > 0) {
+						label = switchArray[i].getElementsByTagName("label")[0].textContent;
 					}
 					else {
 						label = "-BLANK-";
