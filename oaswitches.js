@@ -104,14 +104,21 @@
 				}
 			}
 
-			content += "</tbody></table></body></html>";
+			if (error_log.length > 0) {
+				error_log = error_log;
+			}
+			else {
+				error_log = "No errors generated.";
+			}
+
+			content += "</tbody></table>";
+			content += "<table class='table table-condensed table-bordered'><thead><tr><th>Script error log</th>";
+			content += "</thead><tbody><tr><td>" + error_log + "</td></tr></tbody></table></body></html>";
 
 			var newWindow = window.open("");
 			newWindow.focus();
 			newWindow.document.write(content);
 			newWindow.document.close();
-
-			console.log(error_log);
 		}
 		else {
 
