@@ -11,9 +11,10 @@
 			content += "</style></head><body><table class='table table-condensed table-bordered table-hover table-striped'>";
 			content += "<thead><tr><th>#</th><th>Switch Label</th><th>Switch ID</th><th>Switch Value</th></tr></thead><tbody>";
 
-			var switchArray = document.getElementsByClassName("formBody")[0].getElementsByTagName("table");
-			var counter = 1;
-			var error_log = "";
+			var switchArray = document.getElementsByClassName("formBody")[0].getElementsByTagName("table"),
+				counter = 1,
+				error_log = "",
+				error_count = 0;
 
 			for (var i=0;i<switchArray.length;i++) {
 
@@ -103,12 +104,13 @@
 					}
 				}
 				catch(e) {
-					error_log += e + "\n";
+					error_log += "[" + i + "] " + e + "\n\r";
+					error_count += 1;
 				}
 			}
 
-			if (error_log.length > 0) {
-				error_log = error_log;
+			if (error_count > 0) {
+				error_log = error_count + "error(s):\n\r" + error_log;
 			}
 			else {
 				error_log = "No errors generated.";
