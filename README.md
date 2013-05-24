@@ -5,7 +5,6 @@ _Description: A bookmarklet for converting internal switch page into an HTML tab
 ## How To
 
 ### Instructions for Use
-
 * Drag the below JavaScript code onto your bookmarks bar to create a bookmarklet (feel free to rename it).
 * Navigate to the internal switches page of an account on any server.
 * Click the newly created bookmarklet to get an output of switches.
@@ -18,7 +17,6 @@ javascript:(function(){document.body.appendChild(document.createElement("script"
 ## Helpful Tips
 
 ### Quick Reminder
-
 Only available in modern browsers (umm...that means no IE)
 
 ### HTML Output Guide
@@ -30,22 +28,22 @@ Only available in modern browsers (umm...that means no IE)
 ![dropdown option](https://raw.github.com/23maverick23/oaswitches/master/img/dropdown_option.png) : selected dropdown option or multi-select options will be inline blocks
 
 ## Credits
-
 Base CSS - [Twitter Bootstrap](https://github.com/twitter/bootstrap)
 
 ## Change Log
 
-### v1.2
+### v1.3
+* Minor bug fixes
+* Added error output in case of HTML/CSS changes by dev
 
+### v1.2
 * Added support for internal switch ID in HTML output
 
 ### v1.1
-
 * Fixed logic in `oaswitches.js` for determining selected option(s)
 * Added additional styling to HTML output
 * Added README and LICENSE files
 * Added image files for README
 
 ### v1.0
-
 * Initial commit
