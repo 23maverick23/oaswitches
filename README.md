@@ -32,6 +32,9 @@ Base CSS - [Twitter Bootstrap](https://github.com/twitter/bootstrap)
 
 ## Change Log
 
+### v1.4
+* Fixed switch name bug for multi-select fields
+
 ### v1.3
 * Minor bug fixes
 * Added error output in case of HTML/CSS changes by dev

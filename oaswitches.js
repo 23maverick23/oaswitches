@@ -22,9 +22,14 @@
 					var label = "";
 
 					if (switchArray[i].getElementsByTagName("label").length > 1) {
-						label = switchArray[i].getElementsByTagName("label")[1].textContent;
+						if (switchArray[i].getElementsByTagName("label")[0].htmlFor) {
+							label = switchArray[i].getElementsByTagName("label")[0].textContent;
+						}
+						else {
+							label = switchArray[i].getElementsByTagName("label")[1].textContent;
+						}
 					}
-					else if (switchArray[i].getElementsByTagName("label").length > 0) {
+					else if (switchArray[i].getElementsByTagName("label").length == 1) {
 						label = switchArray[i].getElementsByTagName("label")[0].textContent;
 					}
 					else {
