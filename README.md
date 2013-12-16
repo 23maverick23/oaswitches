@@ -34,6 +34,7 @@ Base CSS - [Twitter Bootstrap](https://github.com/twitter/bootstrap)
 
 ### v1.4
 * Fixed switch name bug for multi-select fields
+* Disabled text selection for error output (easier Excel/CSV copy & paste experience)
 
 ### v1.3
 * Minor bug fixes
