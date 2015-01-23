@@ -11,7 +11,7 @@ _Description: A bookmarklet for converting internal switch page into an HTML tab
 * Check for pop-up blockers or unsecure content warnings - you can ignore them.
 
 ```javascript
-javascript:(function(){document.body.appendChild(document.createElement("script")).src="https://raw.github.com/23maverick23/oaswitches/master/oaswitches.js";})();
+javascript:(function(){document.body.appendChild(document.createElement("script")).src="https://rawgit.com/23maverick23/oaswitches/master/oaswitches.js";})();
 ```
 
 ## Helpful Tips
