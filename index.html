@@ -3,54 +3,65 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
     <title>oaswitches by 23maverick23</title>
   </head>
 
   <body>
-    <header>
+    <div id="container">
       <div class="inner">
-        <h1>oaswitches</h1>
-        <h2>A bookmarklet for converting internal switch page into an HTML table (staff use only)</h2>
-        <a href="https://github.com/23maverick23/oaswitches" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1><em>oaSwitches Bookmarklet</em></h1>
+        <header>
+          <h1>oaswitches</h1>
+          <h2>A bookmarklet for converting internal switch page into an HTML table (staff use only)</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/23maverick23/oaswitches/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/23maverick23/oaswitches/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/23maverick23/oaswitches" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a id="oaswitches-bookmarklet" class="anchor" href="#oaswitches-bookmarklet" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>oaSwitches Bookmarklet</em>
+</h1>
 
 <p><em>Description: A bookmarklet for converting internal switch page into an HTML table (internal staff use only)</em></p>
 
-<h2>How To</h2>
+<h2>
+<a id="how-to" class="anchor" href="#how-to" aria-hidden="true"><span class="octicon octicon-link"></span></a>How To</h2>
 
-<h3>Instructions for Use</h3>
+<h3>
+<a id="instructions-for-use" class="anchor" href="#instructions-for-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>Instructions for Use</h3>
 
 <ul>
 <li>Drag the below JavaScript code onto your bookmarks bar to create a bookmarklet (feel free to rename it).</li>
 <li>Navigate to the internal switches page of an account on any server.</li>
 <li>Click the newly created bookmarklet to get an output of switches.</li>
 <li>Check for pop-up blockers or unsecure content warnings - you can ignore them.</li>
-</ul><div class="highlight"><pre><span class="nx">javascript</span><span class="o">:</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">"script"</span><span class="p">)).</span><span class="nx">src</span><span class="o">=</span><span class="s2">"https://raw.github.com/23maverick23/oaswitches/master/oaswitches.js"</span><span class="p">;})();</span>
-</pre></div>
+</ul>
 
-<h2>Helpful Tips</h2>
+<div class="highlight highlight-javascript"><pre>javascript<span class="pl-k">:</span>(<span class="pl-st">function</span>(){<span class="pl-s3">document</span>.<span class="pl-sc">body</span>.<span class="pl-s3">appendChild</span>(<span class="pl-s3">document</span>.<span class="pl-s3">createElement</span>(<span class="pl-s1"><span class="pl-pds">"</span>script<span class="pl-pds">"</span></span>)).<span class="pl-sc">src</span><span class="pl-k">=</span><span class="pl-s1"><span class="pl-pds">"</span>https://rawgit.com/23maverick23/oaswitches/master/oaswitches.js<span class="pl-pds">"</span></span>;})();</pre></div>
 
-<h3>Quick Reminder</h3>
+<h2>
+<a id="helpful-tips" class="anchor" href="#helpful-tips" aria-hidden="true"><span class="octicon octicon-link"></span></a>Helpful Tips</h2>
+
+<h3>
+<a id="quick-reminder" class="anchor" href="#quick-reminder" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quick Reminder</h3>
 
 <p>Only available in modern browsers (umm...that means no IE)</p>
 
-<h3>HTML Output Guide</h3>
+<h3>
+<a id="html-output-guide" class="anchor" href="#html-output-guide" aria-hidden="true"><span class="octicon octicon-link"></span></a>HTML Output Guide</h3>
 
 <p><img src="https://raw.github.com/23maverick23/oaswitches/master/img/text.png" alt="text"> : manually typed text will be purple (HTML is encoded)</p>
 
@@ -58,47 +69,62 @@
 
 <p><img src="https://raw.github.com/23maverick23/oaswitches/master/img/dropdown_option.png" alt="dropdown option"> : selected dropdown option or multi-select options will be inline blocks</p>
 
-<h2>Credits</h2>
+<h2>
+<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Credits</h2>
 
 <p>Base CSS - <a href="https://github.com/twitter/bootstrap">Twitter Bootstrap</a></p>
 
-<h2>Change Log</h2>
+<h2>
+<a id="change-log" class="anchor" href="#change-log" aria-hidden="true"><span class="octicon octicon-link"></span></a>Change Log</h2>
 
-<h3>v1.2</h3>
+<h3>
+<a id="v14" class="anchor" href="#v14" aria-hidden="true"><span class="octicon octicon-link"></span></a>v1.4</h3>
+
+<ul>
+<li>Fixed switch name bug for multi-select fields</li>
+<li>Disabled text selection for error output (easier Excel/CSV copy &amp; paste experience)</li>
+</ul>
+
+<h3>
+<a id="v13" class="anchor" href="#v13" aria-hidden="true"><span class="octicon octicon-link"></span></a>v1.3</h3>
+
+<ul>
+<li>Minor bug fixes</li>
+<li>Added error output in case of HTML/CSS changes by dev</li>
+</ul>
+
+<h3>
+<a id="v12" class="anchor" href="#v12" aria-hidden="true"><span class="octicon octicon-link"></span></a>v1.2</h3>
 
 <ul>
 <li>Added support for internal switch ID in HTML output</li>
-</ul><h3>v1.1</h3>
+</ul>
+
+<h3>
+<a id="v11" class="anchor" href="#v11" aria-hidden="true"><span class="octicon octicon-link"></span></a>v1.1</h3>
 
 <ul>
 <li>Fixed logic in <code>oaswitches.js</code> for determining selected option(s)</li>
 <li>Added additional styling to HTML output</li>
 <li>Added README and LICENSE files</li>
 <li>Added image files for README</li>
-</ul><h3>v1.0</h3>
+</ul>
+
+<h3>
+<a id="v10" class="anchor" href="#v10" aria-hidden="true"><span class="octicon octicon-link"></span></a>v1.0</h3>
 
 <ul>
 <li>Initial commit</li>
 </ul>
         </section>
 
-        <aside id="sidebar">
-          <a href="https://github.com/23maverick23/oaswitches/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/23maverick23/oaswitches/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+        <footer>
+          oaswitches is maintained by <a href="https://github.com/23maverick23">23maverick23</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
 
-          <p class="repo-owner"><a href="https://github.com/23maverick23/oaswitches"></a> is maintained by <a href="https://github.com/23maverick23">23maverick23</a>.</p>
-
-          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
+        
       </div>
     </div>
-
-  
   </body>
 </html>
